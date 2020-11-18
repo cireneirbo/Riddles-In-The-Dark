@@ -27,12 +27,14 @@ namespace Riddles_In_The_Dark.Controllers
         }
 
         // GET: Riddles/ShowSearchForm
-        public IActionResult ShowSearchForm() {
+        public IActionResult ShowSearchForm() 
+        {
             return View();
         }
 
         // POST: Riddles/ShowSearchResults
-        public async Task<IActionResult> ShowSearchResults(String SearchPhrase) {
+        public async Task<IActionResult> ShowSearchResults(String SearchPhrase) 
+        {
             return View("Index", await _context.Riddle.Where(r => r.RiddleQuestion.Contains(SearchPhrase)).ToListAsync());
         }
 
@@ -55,14 +57,17 @@ namespace Riddles_In_The_Dark.Controllers
         }
 
         // GET: Riddles/Solve
-        public async Task<IActionResult> Solve(int? id) {
-            if (id == null) {
+        public async Task<IActionResult> Solve(int? id) 
+        {
+            if (id == null) 
+            {
                 return NotFound();
             }
 
             var riddle = await _context.Riddle
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (riddle == null) {
+            if (riddle == null) 
+            {
                 return NotFound();
             }
 
@@ -70,14 +75,17 @@ namespace Riddles_In_The_Dark.Controllers
         }
 
         // GET: Riddles/SeeAnswer
-        public async Task<IActionResult> SeeAnswer(int? id) {
-            if (id == null) {
+        public async Task<IActionResult> SeeAnswer(int? id) 
+        {
+            if (id == null) 
+            {
                 return NotFound();
             }
 
             var riddle = await _context.Riddle
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (riddle == null) {
+            if (riddle == null) 
+            {
                 return NotFound();
             }
 
