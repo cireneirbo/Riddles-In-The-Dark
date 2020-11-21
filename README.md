@@ -1,6 +1,6 @@
 # Riddles-In-The-Dark
 
-`Riddles-In-The-Dark` is an ASP.NET Core MVC web application that allows users to post and solve riddles.Logged in users may create, update, and delete entries, while all users can read the listed riddles. There is a search function included as well.
+`Riddles-In-The-Dark` is an ASP.NET Core MVC web application that allows users to post and solve riddles. Logged in users may create, update, and delete entries, while all users can read the listed riddles. There is a search function included as well.
 
 ### Getting Started
 
