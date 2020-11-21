@@ -56,42 +56,6 @@ namespace Riddles_In_The_Dark.Controllers
             return View(riddle);
         }
 
-        // GET: Riddles/Solve
-        public async Task<IActionResult> Solve(int? id) 
-        {
-            if (id == null) 
-            {
-                return NotFound();
-            }
-
-            var riddle = await _context.Riddle
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (riddle == null) 
-            {
-                return NotFound();
-            }
-
-            return View(riddle);
-        }
-
-        // GET: Riddles/SeeAnswer
-        public async Task<IActionResult> SeeAnswer(int? id) 
-        {
-            if (id == null) 
-            {
-                return NotFound();
-            }
-
-            var riddle = await _context.Riddle
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (riddle == null) 
-            {
-                return NotFound();
-            }
-
-            return View(riddle);
-        }
-
         [Authorize]
         // GET: Riddles/Create
         public IActionResult Create()

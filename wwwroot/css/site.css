@@ -75,3 +75,12 @@ body {
 .form-group-hidden {
   visibility: hidden;
 }
+
+.secret-answer{
+  visibility: hidden;
+}
+
+.secret-button {
+    text-decoration: underline;
+    color: #0366d6;
+}
